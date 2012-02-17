@@ -38,12 +38,14 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
-
+\usepackage{enumitem}
 \makeindex 
 
+%%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
 
-
+%Bogstaver i stedet for tal i sectioner
+\renewcommand*\thesection{\Alph{section}}
 
 \begin{document}
 \tableofcontents
@@ -51,4 +53,5 @@
 \include{Love}
 \include{StatutterPF}
 \include{StatutterShuset}
+
 \end{document}

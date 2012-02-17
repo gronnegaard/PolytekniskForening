@@ -10,9 +10,32 @@
 # Latex files #
 ###############
 *.aux
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.glg
+*.glo
+*.gls
 *.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.nav
+*.nlo
 *.out
+*.pdfsync
+*.ps
+*.snm
+*.synctex.gz
 *.toc
+*.vrb
+*.maf
+*.mtc
+*.mtc0
 
 # Packages #
 ############
