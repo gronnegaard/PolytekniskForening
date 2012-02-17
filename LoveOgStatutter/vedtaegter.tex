@@ -1,0 +1,54 @@
+\documentclass[a4paper,danish]{article}
+
+\usepackage[utf8]{inputenc} % Skal passe til editorens indstillinger
+\usepackage[danish]{babel} % danske overskrifter
+\usepackage[T1]{fontenc} % fonte (output)
+\usepackage{lmodern} % vektor fonte
+\usepackage{graphicx} % indsættelse af billeder
+\usepackage{epstopdf} %Tilfj "--enable-write18" i argumentet for LaTex build. Dette vil konvertere .eps figurer til pdf-format
+\usepackage{subfigure}
+\usepackage{a4wide}
+%\usepackage{mathtools} % matematik - understøtter muligheden for at bruge \eqref{}
+\usepackage{hhline}
+\usepackage{endnotes}
+\usepackage{hyperref}
+\def\theendnote{\arabic{endnote}}
+\def\notesname{Opgaver}
+\def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }   
+
+\textwidth = 470pt
+\marginparwidth = 86pt
+\hoffset = -25pt
+\voffset= -10pt
+\textheight = 595pt
+\headheight = 52pt
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage{fancyhdr}
+
+\fancyhf{} % tom header/footer
+%fancyhfoffset{20pt}
+\fancyhfoffset{20pt}
+\fancyhead[OL]{\includegraphics[scale=0.09]{../images/PF.jpg}}
+\fancyhead[OC]{\huge \textbf{Polyteknisk Forenings Love og Statutter\\ Gældende fra 31.02.2012}}
+\fancyhead[OR]{}
+%\includegraphics[scale=0.135]{../images/Logo.png}
+\fancyfoot[FL]{}
+\fancyfoot[FC]{\thepage}
+\fancyfoot[FR]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+
+\makeindex 
+
+\newcounter{fpara}
+
+
+
+\begin{document}
+\tableofcontents
+\newpage
+\include{Love}
+\include{StatutterPF}
+\include{StatutterShuset}
+\end{document}
