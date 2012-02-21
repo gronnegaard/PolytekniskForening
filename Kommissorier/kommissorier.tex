@@ -29,7 +29,7 @@
 %fancyhfoffset{20pt}
 \fancyhfoffset{20pt}
 \fancyhead[OL]{\includegraphics[scale=0.09]{../images/PF.jpg}}
-\fancyhead[OC]{\huge \textbf{Ny i Fællesrådet 2012}}
+\fancyhead[OC]{\huge \textbf{Kommissorier for Polyteknisk Forening}}
 \fancyhead[OR]{}
 %\includegraphics[scale=0.135]{../images/Logo.png}
 \fancyfoot[FL]{}
@@ -44,54 +44,20 @@
 %%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
 
-% niveau af indholdsfortengelsen
-\setcounter{tocdepth}{1}
-
 %Bogstaver i stedet for tal i sectioner
 \renewcommand*\thesection{\Alph{section}}
 
 \begin{document}
-\tableofcontents
-\newpage
-\include{medlem}
+	\tableofcontents
 \newpage
 
-\part{Love og Statutter}
-\include{Love}
-\include{StatutterPF}
-\include{StatutterShuset}
-\newpage
-
-
-\part{Principper}
-\setcounter{section}{0}
-\include{ForretningsordenforFR}
-\include{StyrendeOrganSektor}
-\include{Forretningssektor}
-\include{Fundraising}
-\include{SocialSektor}
-\include{shuset}
-\include{andet}
-\newpage
-
-\part{Kommissorier}
-\setcounter{section}{0}
 \include{FRFU}
 \include{Bestyrelsen}
 \include{BXXeu}
 \include{KritiskRevision}
+%\include{SocialSektor}
+%\include{shuset}
+%\include{andet}
 
-
-\part{Kompetance beskrivelser}
-\setcounter{section}{0}
-\include{Uddanelsesudvalget}
-\include{Socialudvalget}
-
-\part{Retningslinier og Andet}
-\setcounter{section}{0}
-\include{BilagFR}
-\include{ReferaterFR}
-\include{BehandlingOkonomi}
-\include{HytteturePF}
 
 \end{document}
