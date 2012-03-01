@@ -41,6 +41,13 @@
 \usepackage{enumitem}
 \makeindex 
 
+% Indsættelse af refs til statutter
+\newcommand{\sref}[1]{\hyperref[#1]{\S \ S.\ref*{#1}}}
+
+% Indsættelse af refs til love
+\newcommand{\lref}[1]{\hyperref[#1]{\S \ L.\ref*{#1}}}
+
+
 %%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
 
