@@ -1,4 +1,6 @@
-\documentclass[a4paper,danish]{article}
+%& --include-directory=../Kommissorier --include-directory=../Kompetencer --include-directory=../LoveOgStatutter --include-directory=../Principper --include-directory=../Retningslinier
+
+\documentclass[a4paper,danish,12pt,twoside]{report}
 
 \usepackage[utf8]{inputenc} % Skal passe til editorens indstillinger
 \usepackage[danish]{babel} % danske overskrifter
@@ -12,6 +14,8 @@
 \usepackage{hhline}
 \usepackage{endnotes}
 \usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue}
+
 \def\theendnote{\arabic{endnote}}
 \def\notesname{Opgaver}
 \def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }   
@@ -28,18 +32,20 @@
 \fancyhf{} % tom header/footer
 %fancyhfoffset{20pt}
 \fancyhfoffset{20pt}
-\fancyhead[OL]{\includegraphics[scale=0.09]{../images/PF.jpg}}
-\fancyhead[OC]{\huge \textbf{Ny i Fællesrådet 2012}}
-\fancyhead[OR]{}
-%\includegraphics[scale=0.135]{../images/Logo.png}
-\fancyfoot[FL]{}
+\fancyhead[LO,RE]{\includegraphics[scale=0.09]{../images/PF.jpg}}
+\fancyhead[CE]{\huge \textbf{Ny i Fællesrådet 2012}}
 \fancyfoot[FC]{\thepage}
-\fancyfoot[FR]{}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
 
 \makeindex 
+
+% Indsættelse af refs til statutter
+\newcommand{\sref}[1]{\hyperref[#1]{\S \ S.\ref*{#1}}}
+
+% Indsættelse af refs til love
+\newcommand{\lref}[1]{\hyperref[#1]{\S \ L.\ref*{#1}}}
 
 %%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
@@ -51,12 +57,14 @@
 \renewcommand*\thesection{\Alph{section}}
 
 \begin{document}
+\include{frontpage}
 \tableofcontents
 \newpage
 \include{medlem}
 \newpage
 
 \part{Love og Statutter}
+\setcounter{section}{0}
 \include{Love}
 \include{StatutterPF}
 \include{StatutterShuset}
@@ -83,12 +91,13 @@
 \include{KritiskRevision}
 
 
-\part{Kompetance beskrivelser}
+\part{Kompetencer beskrivelser}
 \setcounter{section}{0}
 \include{Uddanelsesudvalget}
 \include{Socialudvalget}
 
-\part{Retningslinier og Andet}
+%\part{Retningslinjer og Andet}
+\part{Retningslinjer}
 \setcounter{section}{0}
 \include{BilagFR}
 \include{ReferaterFR}
