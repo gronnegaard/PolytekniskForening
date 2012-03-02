@@ -11,7 +11,7 @@
 %\usepackage{mathtools} % matematik - understøtter muligheden for at bruge \eqref{}
 \usepackage{hhline}
 \usepackage{endnotes}
-\usepackage{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \def\theendnote{\arabic{endnote}}
 \def\notesname{Opgaver}
 \def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }   
@@ -50,7 +50,17 @@
 %Bogstaver i stedet for tal i sectioner
 \renewcommand*\thesection{\Alph{section}}
 
+
+\renewcommand{\labelenumii}{\theenumi. Stk.\theenumii.}
+
+\title{Ny i Fællesrådet}
+\author{FRFU - Fællesrådets ForretningsUdvalg 2012}
+
 \begin{document}
+
+\maketitle
+
+\newpage
 \tableofcontents
 \newpage
 \include{medlem}
@@ -83,12 +93,12 @@
 \include{KritiskRevision}
 
 
-\part{Kompetance beskrivelser}
+\part{Kompetence beskrivelser}
 \setcounter{section}{0}
 \include{Uddanelsesudvalget}
 \include{Socialudvalget}
 
-\part{Retningslinier og Andet}
+\part{Retningslinjer og Dokumenter vedtaget af FR}
 \setcounter{section}{0}
 \include{BilagFR}
 \include{ReferaterFR}
