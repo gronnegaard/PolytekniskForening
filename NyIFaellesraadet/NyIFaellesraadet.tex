@@ -1,4 +1,6 @@
-\documentclass[a4paper,danish]{article}
+%& --include-directory=../Kommissorier --include-directory=../Kompetencer --include-directory=../LoveOgStatutter --include-directory=../Principper --include-directory=../Retningslinier
+
+\documentclass[a4paper,danish,12pt,twoside]{report}
 
 \usepackage[utf8]{inputenc} % Skal passe til editorens indstillinger
 \usepackage[danish]{babel} % danske overskrifter
@@ -11,7 +13,13 @@
 %\usepackage{mathtools} % matematik - understøtter muligheden for at bruge \eqref{}
 \usepackage{hhline}
 \usepackage{endnotes}
+<<<<<<< HEAD
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+=======
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+>>>>>>> fe1763321b0b75dc1b14a2e52ea9681a330b6b73
 \def\theendnote{\arabic{endnote}}
 \def\notesname{Opgaver}
 \def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }   
@@ -28,18 +36,20 @@
 \fancyhf{} % tom header/footer
 %fancyhfoffset{20pt}
 \fancyhfoffset{20pt}
-\fancyhead[OL]{\includegraphics[scale=0.09]{../images/PF.jpg}}
-\fancyhead[OC]{\huge \textbf{Ny i Fællesrådet 2012}}
-\fancyhead[OR]{}
-%\includegraphics[scale=0.135]{../images/Logo.png}
-\fancyfoot[FL]{}
+\fancyhead[LO,RE]{\includegraphics[scale=0.09]{../images/PF.jpg}}
+\fancyhead[CE]{\huge \textbf{Ny i Fællesrådet 2012}}
 \fancyfoot[FC]{\thepage}
-\fancyfoot[FR]{}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
 
 \makeindex 
+
+% Indsættelse af refs til statutter
+\newcommand{\sref}[1]{\hyperref[#1]{\S \ S.\ref*{#1}}}
+
+% Indsættelse af refs til love
+\newcommand{\lref}[1]{\hyperref[#1]{\S \ L.\ref*{#1}}}
 
 %%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
@@ -57,16 +67,21 @@
 \author{FRFU - Fællesrådets ForretningsUdvalg 2012}
 
 \begin{document}
+<<<<<<< HEAD
 
 \maketitle
 
 \newpage
+=======
+\include{frontpage}
+>>>>>>> fe1763321b0b75dc1b14a2e52ea9681a330b6b73
 \tableofcontents
 \newpage
 \include{medlem}
 \newpage
 
 \part{Love og Statutter}
+\setcounter{section}{0}
 \include{Love}
 \include{StatutterPF}
 \include{StatutterShuset}
@@ -93,12 +108,21 @@
 \include{KritiskRevision}
 
 
+<<<<<<< HEAD
 \part{Kompetence beskrivelser}
+=======
+\part{Kompetencer beskrivelser}
+>>>>>>> fe1763321b0b75dc1b14a2e52ea9681a330b6b73
 \setcounter{section}{0}
 \include{Uddanelsesudvalget}
 \include{Socialudvalget}
 
+<<<<<<< HEAD
 \part{Retningslinjer og Dokumenter vedtaget af FR}
+=======
+%\part{Retningslinjer og Andet}
+\part{Retningslinjer}
+>>>>>>> fe1763321b0b75dc1b14a2e52ea9681a330b6b73
 \setcounter{section}{0}
 \include{BilagFR}
 \include{ReferaterFR}
