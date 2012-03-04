@@ -1,4 +1,4 @@
-\documentclass[a4paper,danish]{article}
+\documentclass[a4paper,danish,12pt,twoside]{report}
 
 \usepackage[utf8]{inputenc} % Skal passe til editorens indstillinger
 \usepackage[danish]{babel} % danske overskrifter
@@ -12,7 +12,6 @@
 \usepackage{hhline}
 \usepackage{endnotes}
 \usepackage{hyperref}
-\usepackage{xcolor}
 \def\theendnote{\arabic{endnote}}
 \def\notesname{Opgaver}
 \def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }
@@ -30,7 +29,7 @@
 %fancyhfoffset{20pt}
 \fancyhfoffset{20pt}
 \fancyhead[OL]{\includegraphics[scale=0.09]{../images/PF.jpg}}
-\fancyhead[OC]{\huge \textbf{Kommissorier for Polyteknisk Forening}}
+\fancyhead[OC]{\huge \textbf{Retningslinjer Polyteknisk Forening}}
 \fancyhead[OR]{}
 %\includegraphics[scale=0.135]{../images/Logo.png}
 \fancyfoot[FL]{}
@@ -45,9 +44,6 @@
 %%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
 
-% Indsættelse af refs til statutter
-\newcommand{\sref}[1]{\hyperref[#1]{\S \ S.\ref*{#1}}}
-
 %Bogstaver i stedet for tal i sectioner
 \renewcommand*\thesection{\Alph{section}}
 
@@ -55,12 +51,10 @@
 	\tableofcontents
 \newpage
 
-\include{FRFU}
-\include{Bestyrelsen}
-\include{BXXeu}
-\include{KritiskRevision}
-%\include{SocialSektor}
-%\include{shuset}
+\include{BilagFR}
+\include{ReferaterFR}
+%\include{BehandlingOkonomi}
+\include{HytteturePF}
 %\include{andet}
 
 

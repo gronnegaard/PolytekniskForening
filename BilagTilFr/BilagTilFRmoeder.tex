@@ -1,4 +1,6 @@
-\documentclass[a4paper,danish]{article}
+%& --include-directory=../Kommissorier --include-directory=../Kompetencer --include-directory=../LoveOgStatutter --include-directory=../Principper --include-directory=../Retningslinier
+
+\documentclass[a4paper,danish,12pt,twoside]{report}
 
 \usepackage[utf8]{inputenc} % Skal passe til editorens indstillinger
 \usepackage[danish]{babel} % danske overskrifter
@@ -10,15 +12,18 @@
 \usepackage{a4wide}
 %\usepackage{mathtools} % matematik - understøtter muligheden for at bruge \eqref{}
 \usepackage{hhline}
+\usepackage{xcolor}
 \usepackage{endnotes}
 \usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue}
+
 \def\theendnote{\arabic{endnote}}
 \def\notesname{Opgaver}
 \def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }   
 
 \textwidth = 470pt
 \marginparwidth = 86pt
-\hoffset = -25pt
+\hoffset = -10pt
 \voffset= -10pt
 \textheight = 595pt
 \headheight = 52pt
@@ -28,34 +33,33 @@
 \fancyhf{} % tom header/footer
 %fancyhfoffset{20pt}
 \fancyhfoffset{20pt}
-\fancyhead[OL]{\includegraphics[scale=0.09]{../images/PF.jpg}}
-\fancyhead[OC]{\huge \textbf{Kommissorier for Polyteknisk Forening}}
-\fancyhead[OR]{}
-%\includegraphics[scale=0.135]{../images/Logo.png}
-\fancyfoot[FL]{}
+\fancyhead[LO,RE]{\includegraphics[scale=0.09]{../images/PF.jpg}}
+\fancyhead[CE]{}
+\fancyhead[RO]{FR215e}
 \fancyfoot[FC]{\thepage}
-\fancyfoot[FR]{}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
 
 \makeindex 
 
+% Indsættelse af refs til statutter
+\newcommand{\sref}[1]{\hyperref[#1]{\S \ S.\ref*{#1}}}
+
+% Indsættelse af refs til love
+\newcommand{\lref}[1]{\hyperref[#1]{\S \ L.\ref*{#1}}}
+
 %%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
+
+% niveau af indholdsfortengelsen
+\setcounter{tocdepth}{1}
 
 %Bogstaver i stedet for tal i sectioner
 \renewcommand*\thesection{\Alph{section}}
 
+\setlength\parindent{0pt}
+
 \begin{document}
-	\tableofcontents
-\newpage
-
-\include{Uddanelsesudvalget}
-\include{Socialudvalget}
-%\include{SocialSektor}
-%\include{shuset}
-%\include{andet}
-
-
+\include{HytteturePF}
 \end{document}
