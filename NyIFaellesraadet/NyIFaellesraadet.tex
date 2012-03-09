@@ -1,6 +1,6 @@
 %& --include-directory=../Kommissorier --include-directory=../Kompetencer --include-directory=../LoveOgStatutter --include-directory=../Principper --include-directory=../Retningslinier
 
-\documentclass[a4paper,danish,12pt,twoside]{report}
+\documentclass[a4paper,danish,12pt,twoside,openright]{report}
 
 \usepackage[utf8]{inputenc} % Skal passe til editorens indstillinger
 \usepackage[danish]{babel} % danske overskrifter
@@ -16,6 +16,7 @@
 \usepackage{endnotes}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue}
+\usepackage{etoolbox}
 
 \def\theendnote{\arabic{endnote}}
 \def\notesname{Opgaver}
@@ -30,17 +31,27 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \usepackage{fancyhdr}
 
+\makeatletter
+% patch \@part[#1]{#2} and \@spart (see the class file) to save the part name
+\pretocmd{\@part}{\gdef\parttitle{#1}}{}{}
+\pretocmd{\@spart}{\gdef\parttitle{#1}}{}{}
+\makeatother	
+
+\renewcommand{\leftmark}{\parttitle}
+
 \fancyhf{} % tom header/footer
 %fancyhfoffset{20pt}
 \fancyhfoffset{20pt}
 \fancyhead[LO,RE]{\includegraphics[scale=0.09]{../images/PF.jpg}}
-\fancyhead[CE]{\huge \textbf{Ny i Fællesrådet 2012}}
+\fancyhead[CO]{\huge \textbf{Ny i Fællesrådet 2012}}
+\fancyhead[CE]{\huge \leftmark}
 \fancyfoot[FC]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
 
 \makeindex 
+
 
 % Indsættelse af refs til statutter
 \newcommand{\sref}[1]{\hyperref[#1]{\S \ S.\ref*{#1}}}
@@ -61,6 +72,8 @@
 
 \begin{document}
 \include{frontpage}
+\addtocontents{toc}{\protect\enlargethispage{50mm}}
+\clearpage
 \tableofcontents
 \newpage
 \include{medlem}
@@ -106,5 +119,6 @@
 \include{ReferaterFR}
 %\include{BehandlingOkonomi}
 \include{HytteturePF}
+
 
 \end{document}
