@@ -1,5 +1,4 @@
-%& --include-directory=../Kommissorier --include-directory=../Kompetencer --include-directory=../LoveOgStatutter
-%& --include-directory=../Principper --include-directory=../Retningslinier
+%& --include-directory=../Kommissorier --include-directory=../Kompetencer --include-directory=../LoveOgStatutter --include-directory=../Principper --include-directory=../Retningslinier
 
 \documentclass[a4paper,danish,12pt,twoside]{report}
 
@@ -14,10 +13,13 @@
 %\usepackage{mathtools} % matematik - understøtter muligheden for at bruge \eqref{}
 \usepackage{hhline}
 \usepackage{endnotes}
+<<<<<<< HEAD
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+=======
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue}
 
+>>>>>>> fe1763321b0b75dc1b14a2e52ea9681a330b6b73
 \def\theendnote{\arabic{endnote}}
 \def\notesname{Opgaver}
 \def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }   
@@ -65,7 +67,14 @@
 \author{FRFU - Fællesrådets ForretningsUdvalg 2012}
 
 \begin{document}
+<<<<<<< HEAD
+
+\maketitle
+
+\newpage
+=======
 \include{frontpage}
+>>>>>>> fe1763321b0b75dc1b14a2e52ea9681a330b6b73
 \tableofcontents
 \newpage
 \include{medlem}
@@ -75,7 +84,7 @@
 \setcounter{section}{0}
 \include{Love}
 \include{StatutterPF}
-%\include{StatutterShuset}
+\include{StatutterShuset}
 \newpage
 
 
@@ -99,16 +108,21 @@
 \include{KritiskRevision}
 
 
+<<<<<<< HEAD
 \part{Kompetence beskrivelser}
-
+=======
 \part{Kompetencer beskrivelser}
+>>>>>>> fe1763321b0b75dc1b14a2e52ea9681a330b6b73
 \setcounter{section}{0}
 \include{Uddanelsesudvalget}
 \include{Socialudvalget}
 
+<<<<<<< HEAD
 \part{Retningslinjer og Dokumenter vedtaget af FR}
+=======
 %\part{Retningslinjer og Andet}
 \part{Retningslinjer}
+>>>>>>> fe1763321b0b75dc1b14a2e52ea9681a330b6b73
 \setcounter{section}{0}
 \include{BilagFR}
 \include{ReferaterFR}

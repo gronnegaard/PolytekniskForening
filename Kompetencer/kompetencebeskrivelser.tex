@@ -14,7 +14,8 @@
 \usepackage{hyperref}
 \def\theendnote{\arabic{endnote}}
 \def\notesname{Opgaver}
-\def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }   
+\def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }
+\usepackage{xcolor}
 
 \textwidth = 470pt
 \marginparwidth = 86pt
@@ -29,7 +30,7 @@
 %fancyhfoffset{20pt}
 \fancyhfoffset{20pt}
 \fancyhead[OL]{\includegraphics[scale=0.09]{../images/PF.jpg}}
-\fancyhead[OC]{\huge \textbf{Retningslinier og andet for Polyteknisk Forening}}
+\fancyhead[OC]{\huge \textbf{Kommissorier for Polyteknisk Forening}}
 \fancyhead[OR]{}
 %\includegraphics[scale=0.135]{../images/Logo.png}
 \fancyfoot[FL]{}
@@ -39,7 +40,7 @@
 \renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
 
-\makeindex 
+\makeindex
 
 %%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
@@ -51,10 +52,10 @@
 	\tableofcontents
 \newpage
 
-\include{BilagFR}
-\include{ReferaterFR}
-%\include{BehandlingOkonomi}
-\include{HytteturePF}
+\include{Uddanelsesudvalget}
+\include{Socialudvalget}
+%\include{SocialSektor}
+%\include{shuset}
 %\include{andet}
 
 
