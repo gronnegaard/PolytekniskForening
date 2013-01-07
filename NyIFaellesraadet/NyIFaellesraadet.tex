@@ -1,6 +1,6 @@
 %& --include-directory=../Kommissorier --include-directory=../Kompetencer --include-directory=../LoveOgStatutter --include-directory=../Principper --include-directory=../Retningslinier
 
-\documentclass[a4paper,danish,12pt,twoside]{report}
+\documentclass[a4paper,danish,12pt,twoside]{report}		
 
 \usepackage[utf8]{inputenc} % Skal passe til editorens indstillinger
 \usepackage[danish]{babel} % danske overskrifter
@@ -46,6 +46,9 @@
 
 % Indsættelse af refs til love
 \newcommand{\lref}[1]{\hyperref[#1]{\S \ L.\ref*{#1}}}
+
+% Indsættelse af Stk
+\newcommand{\stk}[1]{\textit{Stk. #1.}}
 
 %%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
