@@ -13,12 +13,15 @@
 %\usepackage{mathtools} % matematik - understøtter muligheden for at bruge \eqref{}
 \usepackage{hhline}
 \usepackage{endnotes}
+\usepackage{todonotes}
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue}
 \def\theendnote{\arabic{endnote}}
 \def\notesname{Opgaver}
 \def\enoteheading{\item {\notesname} \\ \leavevmode\par\vskip-\baselineskip }   
+
+\renewcommand{\thechapter}{\thepart}
 
 \textwidth = 470pt
 \marginparwidth = 86pt
@@ -44,8 +47,14 @@
 % Indsættelse af refs til statutter
 \newcommand{\sref}[1]{\hyperref[#1]{\S \ S.\ref*{#1}}}
 
+% Indsættelse af refs til stks i statutter
+\newcommand{\srefstk}[2]{\hyperref[#1]{\S \ S.\ref*{#1} Stk. #2}}
+
 % Indsættelse af refs til love
 \newcommand{\lref}[1]{\hyperref[#1]{\S \ L.\ref*{#1}}}
+
+% Indsættelse af refs til stks i love
+\newcommand{\lrefstk}[2]{\hyperref[#1]{\S \ L.\ref*{#1} Stk. #2}}
 
 % Indsættelse af Stk
 \newcommand{\stk}[1]{\textit{Stk. #1.}}
@@ -73,6 +82,7 @@
 \newpage
 
 \part{Love og Statutter}
+\fancyhead[CO]{\textbf{Love og Statutter}}
 \setcounter{section}{0}
 \include{Love}
 \include{StatutterPF}
@@ -81,11 +91,11 @@
 
 
 \part{Principper}
+\fancyhead[CO]{\textbf{Principper}}
 \setcounter{section}{0}
 \include{ForretningsordenforFR}
 \include{StyrendeOrganSektor}
 \include{Forretningssektor}
-\include{Fundraising}
 \include{SocialSektor}
 \include{shuset}
 \include{PolitikkerPF}
@@ -93,6 +103,7 @@
 \newpage
 
 \part{Kommissorier}
+\fancyhead[CO]{\textbf{Kommissorier}}
 \setcounter{section}{0}
 \include{FRFU}
 \include{Bestyrelsen}
@@ -101,11 +112,13 @@
 
 
 \part{Kompetencer beskrivelser}
+\fancyhead[CO]{\textbf{Kompetencer beskrivelser}}
 \setcounter{section}{0}
 \include{Uddanelsesudvalget}
 \include{Socialudvalget}
 
 \part{Retningslinjer}
+\fancyhead[CO]{\textbf{Retningslinjer}}
 \setcounter{section}{0}
 \include{BilagFR}
 \include{ReferaterFR}
