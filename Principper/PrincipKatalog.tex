@@ -41,11 +41,38 @@
 
 \makeindex 
 
+
+% Indsættelse af refs til statutter
+\newcommand{\sref}[1]{\hyperref[#1]{\S \ S.\ref*{#1}}}
+
+% Indsættelse af refs til stks i statutter
+\newcommand{\srefstk}[2]{\hyperref[#1]{\S \ S.\ref*{#1} Stk. #2}}
+
+% Indsættelse af refs til love
+\newcommand{\lref}[1]{\hyperref[#1]{\S \ L.\ref*{#1}}}
+
+% Indsættelse af refs til stks i love
+\newcommand{\lrefstk}[2]{\hyperref[#1]{\S \ L.\ref*{#1} Stk. #2}}
+
+% Indsættelse af refs til kapitler i love og statutter
+\newcommand{\kapref}[1]{\hyperref[#1]{Kap.\ \ref*{#1}}}
+
+% Indsættelse af Stk
+\newcommand{\stk}[1]{\textit{Stk. #1.}}
+
 %%brug af § tegn i lister (usecounter)
 \newcounter{fpara}
 
+% niveau af indholdsfortengelsen
+\setcounter{tocdepth}{1}
+
 %Bogstaver i stedet for tal i sectioner
 \renewcommand*\thesection{\Alph{section}}
+
+
+\renewcommand{\labelenumii}{\theenumi. Stk.\theenumii.}
+
+
 
 \begin{document}
 	\tableofcontents
